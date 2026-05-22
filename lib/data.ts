@@ -81,11 +81,11 @@ export const projects: Project[] = [
   },
 ];
 
-export const WA_NUMBER = "6285930975746";
+export const WA_NUMBER = "6285173221561";
 export const WA_LINK =
-  "https://wa.me/6285930975746?text=Halo%20RumahPertama%2C%20saya%20ingin%20konsultasi%20rumah%20pertama.%20Saya%20tertarik%20dengan%20Ayyana%20Residence%20atau%20proyek%20lain%20yang%20cocok%20untuk%20saya.";
+  "https://wa.me/6285173221561?text=Halo%20RumahPertama%2C%20saya%20ingin%20konsultasi%20rumah%20pertama.%20Saya%20tertarik%20dengan%20Ayyana%20Residence%20atau%20proyek%20lain%20yang%20cocok%20untuk%20saya.";
 export const WA_LINK_AYYANA =
-  "https://wa.me/6285930975746?text=Halo%20RumahPertama%2C%20saya%20tertarik%20dengan%20Ayyana%20Residence%20Pringgabaya.%20Boleh%20info%20lebih%20lanjut%3F";
+  "https://wa.me/6285173221561?text=Halo%20RumahPertama%2C%20saya%20tertarik%20dengan%20Ayyana%20Residence%20Pringgabaya.%20Boleh%20info%20lebih%20lanjut%3F";
 
 export const problemCards = [
   "Bingung syarat rumah subsidi",
