@@ -48,17 +48,17 @@ export const projects: Project[] = [
     bookingFee: "Rp500.000",
     images: [
       {
-        url: "/images/ayyana/slide-1-fasad-utama-ayyana.webp",
+        url: "/images/ayyana/ayyana-fasad-utama.webp",
         caption: "Tampak depan rumah Ayyana Residence",
         alt: "Tampak depan rumah subsidi Ayyana Residence Type 30/80 di Pringgabaya Lombok Timur",
       },
       {
-        url: "/images/ayyana/slide-2-angle-rumah-ayyana.webp",
+        url: "/images/ayyana/ayyana-angle-rumah.webp",
         caption: "Desain rumah dari sudut berbeda",
         alt: "Tampilan rumah Ayyana Residence dari sudut samping dengan desain modern tropis",
       },
       {
-        url: "/images/ayyana/slide-3-lingkungan-ayyana.webp",
+        url: "/images/ayyana/ayyana-lingkungan.webp",
         caption: "Suasana lingkungan kawasan Ayyana Residence",
         alt: "Lingkungan perumahan Ayyana Residence dengan jalan paving dan suasana kawasan yang rapi",
       },
