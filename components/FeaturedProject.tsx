@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { MapPin } from "lucide-react";
+import Image from "next/image";
 import { projects, WA_LINK_AYYANA } from "@/lib/data";
 
 export default function FeaturedProject() {
@@ -46,29 +47,73 @@ export default function FeaturedProject() {
             </span>
           </div>
 
-          <p className="text-sm mb-6" style={{ color: "var(--rp-gray-text)" }}>
+          <p className="text-sm mb-8" style={{ color: "var(--rp-gray-text)" }}>
             {project.address}
           </p>
 
-          {/* Project Images */}
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
-            {project.images.map((img, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, scale: 0.95 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-                className="relative overflow-hidden rounded-xl border group cursor-pointer"
-                style={{ borderColor: "var(--rp-border)" }}
-              >
-                <div
-                  className="aspect-[4/3] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
-                  style={{ backgroundImage: `url('${img}')` }}
-                />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
-              </motion.div>
-            ))}
+          {/* Image Carousel */}
+          <div className="mb-2">
+            {/* Desktop: 3-column grid */}
+            <div className="hidden sm:grid sm:grid-cols-3 gap-4 mb-4">
+              {project.images.map((img, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ delay: i * 0.1 }}
+                  className="rounded-xl overflow-hidden border"
+                  style={{ borderColor: "var(--rp-border)" }}
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden">
+                    <Image
+                      src={img.url}
+                      alt={img.alt}
+                      fill
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="object-cover transition-transform duration-500 hover:scale-110"
+                    />
+                  </div>
+                  <p className="text-xs px-3 py-2 text-center" style={{ color: "var(--rp-gray-text)" }}>
+                    {img.caption}
+                  </p>
+                </motion.div>
+              ))}
+            </div>
+
+            {/* Mobile: horizontal scroll carousel */}
+            <div className="sm:hidden overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-4 px-4 mb-4">
+              <div className="flex gap-4" style={{ width: "max-content" }}>
+                {project.images.map((img, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="snap-center w-[85vw] max-w-[340px] shrink-0 rounded-xl overflow-hidden border"
+                    style={{ borderColor: "var(--rp-border)" }}
+                  >
+                    <div className="relative aspect-[4/3] overflow-hidden">
+                      <Image
+                        src={img.url}
+                        alt={img.alt}
+                        fill
+                        sizes="85vw"
+                        className="object-cover"
+                      />
+                    </div>
+                    <p className="text-xs px-3 py-2 text-center" style={{ color: "var(--rp-gray-text)" }}>
+                      {img.caption}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+
+            <p className="text-xs italic mb-8" style={{ color: "var(--rp-gray-text)" }}>
+              {project.carouselNote}
+            </p>
           </div>
 
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm mb-8">

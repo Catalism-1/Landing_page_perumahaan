@@ -1,3 +1,15 @@
+export interface ProjectImage {
+  url: string;
+  caption: string;
+  alt: string;
+}
+
+export interface LocationAdvantage {
+  title: string;
+  description: string;
+  icon: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -10,7 +22,9 @@ export interface Project {
   totalUnits: number;
   bookedUnits: number;
   bookingFee: string;
-  images: string[];
+  images: ProjectImage[];
+  carouselNote: string;
+  locationAdvantages: LocationAdvantage[];
   specs: string[];
   simulation: {
     tenor: string;
@@ -33,9 +47,54 @@ export const projects: Project[] = [
     bookedUnits: 8,
     bookingFee: "Rp500.000",
     images: [
-      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
-      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
-      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+      {
+        url: "/images/ayyana/slide-1-fasad-utama-ayyana.webp",
+        caption: "Tampak depan rumah Ayyana Residence",
+        alt: "Tampak depan rumah subsidi Ayyana Residence Type 30/80 di Pringgabaya Lombok Timur",
+      },
+      {
+        url: "/images/ayyana/slide-2-angle-rumah-ayyana.webp",
+        caption: "Desain rumah dari sudut berbeda",
+        alt: "Tampilan rumah Ayyana Residence dari sudut samping dengan desain modern tropis",
+      },
+      {
+        url: "/images/ayyana/slide-3-lingkungan-ayyana.webp",
+        caption: "Suasana lingkungan kawasan Ayyana Residence",
+        alt: "Lingkungan perumahan Ayyana Residence dengan jalan paving dan suasana kawasan yang rapi",
+      },
+    ],
+    carouselNote: "Sebagian gambar merupakan ilustrasi visual. Hasil akhir dapat berbeda.",
+    locationAdvantages: [
+      {
+        title: "Dekat Pelabuhan Kayangan",
+        description: "Akses menuju salah satu jalur penting transportasi Lombok Timur lebih mudah.",
+        icon: "Anchor",
+      },
+      {
+        title: "Depan Kompi TNI Pringgabaya",
+        description: "Lokasi mudah dikenali dan memberi nilai tambah dari sisi keamanan lingkungan.",
+        icon: "ShieldCheck",
+      },
+      {
+        title: "Dekat Pertamina Labuan Lombok",
+        description: "Memudahkan kebutuhan mobilitas harian dan akses kendaraan.",
+        icon: "Fuel",
+      },
+      {
+        title: "Dekat Fasilitas Kesehatan",
+        description: "Lebih tenang karena kebutuhan kesehatan keluarga lebih mudah dijangkau.",
+        icon: "HeartPulse",
+      },
+      {
+        title: "Dekat Fasilitas Pendidikan",
+        description: "Cocok untuk keluarga muda yang mempertimbangkan akses sekolah anak.",
+        icon: "GraduationCap",
+      },
+      {
+        title: "Dekat Kawasan Industri & Aktivitas Ekonomi",
+        description: "Potensi kawasan berkembang, cocok untuk tempat tinggal maupun aset jangka panjang.",
+        icon: "BriefcaseBusiness",
+      },
     ],
     specs: [
       "Rumah subsidi Type 30/80",

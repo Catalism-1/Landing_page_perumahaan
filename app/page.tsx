@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import ProblemSection from "@/components/ProblemSection";
 import SolutionSection from "@/components/SolutionSection";
 import FeaturedProject from "@/components/FeaturedProject";
+import LocationAdvantages from "@/components/LocationAdvantages";
 import UnitAvailability from "@/components/UnitAvailability";
 import ProjectDetails from "@/components/ProjectDetails";
 import SimulationTable from "@/components/SimulationTable";
@@ -22,6 +23,7 @@ export default function Home() {
         <ProblemSection />
         <SolutionSection />
         <FeaturedProject />
+        <LocationAdvantages />
         <UnitAvailability />
         <ProjectDetails />
         <SimulationTable />
