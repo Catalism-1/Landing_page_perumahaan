@@ -10,6 +10,7 @@ export interface Project {
   totalUnits: number;
   bookedUnits: number;
   bookingFee: string;
+  images: string[];
   specs: string[];
   simulation: {
     tenor: string;
@@ -31,6 +32,11 @@ export const projects: Project[] = [
     totalUnits: 35,
     bookedUnits: 8,
     bookingFee: "Rp500.000",
+    images: [
+      "https://images.unsplash.com/photo-1580587771525-78b9dba3b914?w=800&q=80",
+      "https://images.unsplash.com/photo-1564013799919-ab600027ffc6?w=800&q=80",
+      "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?w=800&q=80",
+    ],
     specs: [
       "Rumah subsidi Type 30/80",
       "2 kamar tidur",

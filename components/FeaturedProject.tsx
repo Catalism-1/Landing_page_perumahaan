@@ -50,6 +50,27 @@ export default function FeaturedProject() {
             {project.address}
           </p>
 
+          {/* Project Images */}
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8">
+            {project.images.map((img, i) => (
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                transition={{ delay: i * 0.1 }}
+                className="relative overflow-hidden rounded-xl border group cursor-pointer"
+                style={{ borderColor: "var(--rp-border)" }}
+              >
+                <div
+                  className="aspect-[4/3] bg-cover bg-center transition-transform duration-500 group-hover:scale-110"
+                  style={{ backgroundImage: `url('${img}')` }}
+                />
+                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors" />
+              </motion.div>
+            ))}
+          </div>
+
           <div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm mb-8">
             <div className="flex items-center gap-1.5">
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--rp-primary)" }} />
