@@ -1,6 +1,6 @@
 "use client";
 
-import { lead } from "@/lib/fpixel";
+import { FB_PIXEL_ID } from "@/lib/fpixel";
 
 interface Props {
   href: string;
@@ -27,10 +27,18 @@ export default function WhatsAppLink({
 }: Props) {
   function handleClick(e: React.MouseEvent<HTMLAnchorElement>) {
     e.preventDefault();
-    lead(source);
     if (onClick) onClick();
+
+    if (FB_PIXEL_ID && typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", {
+        content_name: "Ayyana Residence Pringgabaya",
+        content_category: "Rumah Subsidi",
+        lead_source: source,
+      });
+    }
+
     setTimeout(() => {
-      window.open(href, target || "_blank", rel === "noopener noreferrer" ? "noopener,noreferrer" : undefined);
+      window.location.href = href;
     }, 300);
   }
 
