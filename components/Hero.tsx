@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { ChevronDown, Check } from "lucide-react";
 import { WA_LINK } from "@/lib/data";
 
@@ -19,12 +20,13 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Background Image */}
-      <div
-        className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage:
-            "url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?w=1600&q=80')",
-        }}
+      <Image
+        src="/images/ayyana/ayyana-lingkungan.webp"
+        alt="Lingkungan perumahan Ayyana Residence dengan jalan paving dan suasana kawasan yang rapi"
+        fill
+        priority
+        sizes="100vw"
+        className="object-cover object-center"
       />
 
       {/* Gradient Overlay */}
