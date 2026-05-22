@@ -1,5 +1,6 @@
 import { Home } from "lucide-react";
 import Link from "next/link";
+import { WA_LINK } from "@/lib/data";
 
 const socialIcons = [
   {
@@ -42,7 +43,7 @@ export default function Footer() {
               </span>
             </div>
             <p className="text-sm mb-5" style={{ color: "rgba(255,255,255,0.6)" }}>
-              Langkah pertama menuju rumah impianmu.
+              Bantu kamu cari rumah pertama — dari konsultasi, cek syarat, simulasi cicilan, sampai diarahkan ke proyek yang cocok.
             </p>
             <div className="flex gap-3">
               {socialIcons.map((social) => (
@@ -70,7 +71,7 @@ export default function Footer() {
               Layanan
             </h4>
             <ul className="space-y-2.5">
-              {["Cari Rumah", "KPR", "Konsultasi", "Survey Lokasi"].map((item) => (
+              {["Konsultasi", "Cek Syarat", "Simulasi Cicilan", "Survey Lokasi"].map((item) => (
                 <li key={item}>
                   <Link
                     href="#"
@@ -93,7 +94,7 @@ export default function Footer() {
               Perusahaan
             </h4>
             <ul className="space-y-2.5">
-              {["Tentang Kami", "Blog", "Karir", "Kontak"].map((item) => (
+              {["Tentang", "Proyek Pilihan", "Cara Kerja", "FAQ"].map((item) => (
                 <li key={item}>
                   <Link
                     href="#"
@@ -116,16 +117,20 @@ export default function Footer() {
               Kontak
             </h4>
             <ul className="space-y-2.5 text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
-              <li>Jl. Raya Darmo No. 45,<br />Surabaya 60241</li>
+              <li>Pringgabaya, Lombok Timur, NTB</li>
               <li>
-                <a href="tel:+628123456789" className="hover:text-white transition-colors">
-                  +62 812 3456 789
+                <a href="https://wa.me/6285930975746" className="hover:text-white transition-colors">
+                  0859 3097 5746
                 </a>
               </li>
               <li>
-                <a href="mailto:halo@rumahpertama.id" className="hover:text-white transition-colors">
-                  halo@rumahpertama.id
-                </a>
+                <Link
+                  href={WA_LINK}
+                  target="_blank"
+                  className="hover:text-white transition-colors"
+                >
+                  Chat WhatsApp
+                </Link>
               </li>
             </ul>
           </div>

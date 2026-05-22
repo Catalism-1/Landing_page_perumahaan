@@ -3,13 +3,14 @@
 import { useState, useEffect } from "react";
 import { Home, Menu, X } from "lucide-react";
 import Link from "next/link";
+import { WA_LINK } from "@/lib/data";
 
 const navLinks = [
-  { label: "Beranda", href: "#beranda" },
-  { label: "Listing", href: "#properti" },
-  { label: "Kalkulator KPR", href: "#kalkulator" },
-  { label: "Tentang Kami", href: "#cara-kerja" },
+  { label: "Tentang", href: "#tentang" },
+  { label: "Proyek Pilihan", href: "#proyek-pilihan" },
+  { label: "Cara Kerja", href: "#cara-kerja" },
   { label: "FAQ", href: "#faq" },
+  { label: "Konsultasi", href: "#konsultasi" },
 ];
 
 export default function Navbar() {
@@ -66,7 +67,7 @@ export default function Navbar() {
               </Link>
             ))}
             <Link
-              href="https://wa.me/628123456789?text=Halo,%20saya%20tertarik%20konsultasi%20rumah"
+              href={WA_LINK}
               target="_blank"
               rel="noopener noreferrer"
               className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-md"
@@ -106,7 +107,7 @@ export default function Navbar() {
             </Link>
           ))}
           <Link
-            href="https://wa.me/628123456789?text=Halo,%20saya%20tertarik%20konsultasi%20rumah"
+            href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
             className="px-4 py-2 rounded-lg text-sm font-semibold text-white text-center"

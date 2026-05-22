@@ -1,11 +1,12 @@
 "use client";
 
 import Link from "next/link";
+import { WA_LINK } from "@/lib/data";
 
 export default function WhatsAppButton() {
   return (
     <Link
-      href="https://wa.me/628123456789?text=Halo,%20saya%20tertarik%20konsultasi%20rumah"
+      href={WA_LINK}
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"

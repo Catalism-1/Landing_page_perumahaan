@@ -1,13 +1,15 @@
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
-import SocialProof from "@/components/SocialProof";
-import Features from "@/components/Features";
-import Properties from "@/components/Properties";
-import Calculator from "@/components/Calculator";
-import Process from "@/components/Process";
-import Testimonials from "@/components/Testimonials";
+import ProblemSection from "@/components/ProblemSection";
+import SolutionSection from "@/components/SolutionSection";
+import FeaturedProject from "@/components/FeaturedProject";
+import UnitAvailability from "@/components/UnitAvailability";
+import ProjectDetails from "@/components/ProjectDetails";
+import SimulationTable from "@/components/SimulationTable";
+import Requirements from "@/components/Requirements";
+import HowItWorks from "@/components/HowItWorks";
 import FAQ from "@/components/FAQ";
-import CTASection from "@/components/CTASection";
+import FinalCTA from "@/components/FinalCTA";
 import Footer from "@/components/Footer";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
@@ -17,14 +19,16 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <SocialProof />
-        <Features />
-        <Properties />
-        <Calculator />
-        <Process />
-        <Testimonials />
+        <ProblemSection />
+        <SolutionSection />
+        <FeaturedProject />
+        <UnitAvailability />
+        <ProjectDetails />
+        <SimulationTable />
+        <Requirements />
+        <HowItWorks />
         <FAQ />
-        <CTASection />
+        <FinalCTA />
       </main>
       <Footer />
       <WhatsAppButton />

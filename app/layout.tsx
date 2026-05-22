@@ -2,13 +2,13 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "RumahPertama — Konsultan Properti #1 Anak Muda Indonesia",
+  title: "RumahPertama — Konsultasi Rumah Pertama, Cari yang Cocok",
   description:
-    "Wujudkan rumah pertama kamu bareng RumahPertama. Konsultasi gratis, bank partner resmi, pendampingan sampai akad.",
+    "Cari rumah pertama? Konsultasi dulu biar tidak salah pilih. RumahPertama bantu cek kebutuhan, syarat, estimasi cicilan, dan arahkan ke proyek yang cocok.",
   openGraph: {
-    title: "RumahPertama — Konsultan Properti #1 Anak Muda Indonesia",
+    title: "RumahPertama — Konsultasi Rumah Pertama, Cari yang Cocok",
     description:
-      "Wujudkan rumah pertama kamu bareng RumahPertama. Konsultasi gratis, bank partner resmi, pendampingan sampai akad.",
+      "Cari rumah pertama? Konsultasi dulu biar tidak salah pilih. RumahPertama bantu cek kebutuhan, syarat, estimasi cicilan, dan arahkan ke proyek yang cocok.",
     type: "website",
   },
 };
