@@ -5,6 +5,7 @@ import { Home, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { WA_LINK } from "@/lib/data";
 import ThemeToggle from "@/components/ThemeToggle";
+import WhatsAppLink from "@/components/WhatsAppLink";
 
 const navLinks = [
   { label: "Tentang", href: "#tentang" },
@@ -68,15 +69,14 @@ export default function Navbar() {
               </Link>
             ))}
             <ThemeToggle scrolled={scrolled} />
-            <Link
+            <WhatsAppLink
               href={WA_LINK}
-              target="_blank"
-              rel="noopener noreferrer"
+              source="navbar_desktop"
               className="px-4 py-2 rounded-lg text-sm font-semibold text-white transition-all hover:scale-105 hover:shadow-md"
               style={{ background: "var(--rp-cta)" }}
             >
               Konsultasi Gratis
-            </Link>
+            </WhatsAppLink>
           </div>
 
           {/* Mobile controls */}
@@ -111,16 +111,15 @@ export default function Navbar() {
               {link.label}
             </Link>
           ))}
-          <Link
+          <WhatsAppLink
             href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="px-4 py-2 rounded-lg text-sm font-semibold text-white text-center"
+            source="navbar_mobile"
+            className="px-4 py-2 rounded-lg text-sm font-semibold text-white text-center transition-all hover:scale-105 hover:shadow-md"
             style={{ background: "var(--rp-cta)" }}
             onClick={() => setMobileOpen(false)}
           >
             Konsultasi Gratis
-          </Link>
+          </WhatsAppLink>
         </div>
       )}
     </nav>

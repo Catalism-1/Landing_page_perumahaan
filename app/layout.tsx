@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import ThemeProvider from "@/components/ThemeProvider";
+import MetaPixel from "@/components/MetaPixel";
 
 export const metadata: Metadata = {
   title: "RumahPertama — Konsultasi Rumah Pertama, Cari yang Cocok",
@@ -45,6 +46,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased" suppressHydrationWarning>
+        <MetaPixel />
         <ThemeProvider>
           {children}
         </ThemeProvider>
