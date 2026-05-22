@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 
-const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || "";
+const pixelId = process.env.NEXT_PUBLIC_META_PIXEL_ID || "1549309349959177";
 
 export default function MetaPixel() {
   if (!pixelId) return null;
@@ -10,7 +10,7 @@ export default function MetaPixel() {
   return (
     <>
       <Script
-        id="meta-pixel-base"
+        id="meta-pixel-code"
         strategy="afterInteractive"
         dangerouslySetInnerHTML={{
           __html: `
