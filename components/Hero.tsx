@@ -2,7 +2,6 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import Image from "next/image";
 import { ChevronDown, Check } from "lucide-react";
 import { WA_LINK } from "@/lib/data";
 
@@ -20,13 +19,11 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* Background Image */}
-      <Image
+      <img
         src="/images/ayyana/ayyana-lingkungan.webp"
         alt="Lingkungan perumahan Ayyana Residence dengan jalan paving dan suasana kawasan yang rapi"
-        fill
-        priority
-        sizes="100vw"
-        className="object-cover object-center"
+        className="absolute inset-0 w-full h-full object-cover object-center"
+        loading="eager"
       />
 
       {/* Gradient Overlay */}

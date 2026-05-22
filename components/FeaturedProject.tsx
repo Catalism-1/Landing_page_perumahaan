@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { MapPin, Flame, Sparkles, Clock } from "lucide-react";
-import Image from "next/image";
 import { projects, WA_LINK_AYYANA, WA_LINK_PROMO } from "@/lib/data";
 
 export default function FeaturedProject() {
@@ -172,44 +171,42 @@ export default function FeaturedProject() {
                   className="rounded-xl overflow-hidden border bg-white dark:bg-[#103A31] transition-colors duration-300"
                   style={{ borderColor: "var(--rp-border)" }}
                 >
-                  <div className="relative aspect-[4/3] overflow-hidden">
-                    <Image
-                      src={img.url}
-                      alt={img.alt}
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-transform duration-500 hover:scale-110"
-                    />
-                  </div>
-                  <p className="text-xs px-3 py-2 text-center" style={{ color: "var(--rp-gray-text)" }}>
-                    {img.caption}
-                  </p>
-                </motion.div>
-              ))}
-            </div>
-
-            {/* Mobile: horizontal scroll carousel */}
-            <div className="sm:hidden overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-4 px-4 mb-4">
-              <div className="flex gap-4" style={{ width: "max-content" }}>
-                {project.images.map((img, i) => (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 10 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ delay: i * 0.1 }}
-                    className="snap-center w-[85vw] max-w-[340px] shrink-0 rounded-xl overflow-hidden border bg-white dark:bg-[#103A31] transition-colors duration-300"
-                    style={{ borderColor: "var(--rp-border)" }}
-                  >
                     <div className="relative aspect-[4/3] overflow-hidden">
-                      <Image
+                      <img
                         src={img.url}
                         alt={img.alt}
-                        fill
-                        sizes="85vw"
-                        className="object-cover"
+                        className="absolute inset-0 w-full h-full object-cover transition-transform duration-500 hover:scale-110"
+                        loading="lazy"
                       />
                     </div>
+                    <p className="text-xs px-3 py-2 text-center" style={{ color: "var(--rp-gray-text)" }}>
+                      {img.caption}
+                    </p>
+                  </motion.div>
+                ))}
+              </div>
+
+              {/* Mobile: horizontal scroll carousel */}
+              <div className="sm:hidden overflow-x-auto snap-x snap-mandatory scrollbar-none -mx-4 px-4 mb-4">
+                <div className="flex gap-4" style={{ width: "max-content" }}>
+                  {project.images.map((img, i) => (
+                    <motion.div
+                      key={i}
+                      initial={{ opacity: 0, y: 10 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ delay: i * 0.1 }}
+                      className="snap-center w-[85vw] max-w-[340px] shrink-0 rounded-xl overflow-hidden border bg-white dark:bg-[#103A31] transition-colors duration-300"
+                      style={{ borderColor: "var(--rp-border)" }}
+                    >
+                      <div className="relative aspect-[4/3] overflow-hidden">
+                        <img
+                          src={img.url}
+                          alt={img.alt}
+                          className="absolute inset-0 w-full h-full object-cover"
+                          loading="lazy"
+                        />
+                      </div>
                     <p className="text-xs px-3 py-2 text-center" style={{ color: "var(--rp-gray-text)" }}>
                       {img.caption}
                     </p>
