@@ -4,6 +4,7 @@ import { useState, useEffect } from "react";
 import { Home, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { WA_LINK } from "@/lib/data";
+import ThemeToggle from "@/components/ThemeToggle";
 
 const navLinks = [
   { label: "Tentang", href: "#tentang" },
@@ -27,7 +28,7 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
-          ? "bg-white shadow-md"
+          ? "bg-white shadow-md dark:bg-[#071F1A] dark:shadow-black/30"
           : "bg-transparent"
       }`}
     >
@@ -42,7 +43,7 @@ export default function Navbar() {
               <Home size={16} color="white" />
             </div>
             <span
-              className="font-bold text-xl"
+              className="font-bold text-xl transition-colors duration-300"
               style={{
                 fontFamily: "var(--font-jakarta), sans-serif",
                 color: scrolled || mobileOpen ? "var(--rp-primary)" : "white",
@@ -53,7 +54,7 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden md:flex items-center gap-5">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
@@ -66,6 +67,7 @@ export default function Navbar() {
                 {link.label}
               </Link>
             ))}
+            <ThemeToggle scrolled={scrolled} />
             <Link
               href={WA_LINK}
               target="_blank"
@@ -77,24 +79,27 @@ export default function Navbar() {
             </Link>
           </div>
 
-          {/* Mobile Hamburger */}
-          <button
-            className="md:hidden p-2"
-            onClick={() => setMobileOpen(!mobileOpen)}
-            aria-label="Toggle menu"
-          >
-            {mobileOpen ? (
-              <X size={24} color={scrolled || mobileOpen ? "var(--rp-dark)" : "white"} />
-            ) : (
-              <Menu size={24} color={scrolled ? "var(--rp-dark)" : "white"} />
-            )}
-          </button>
+          {/* Mobile controls */}
+          <div className="flex items-center gap-2 md:hidden">
+            <ThemeToggle scrolled={scrolled} />
+            <button
+              className="p-2"
+              onClick={() => setMobileOpen(!mobileOpen)}
+              aria-label="Toggle menu"
+            >
+              {mobileOpen ? (
+                <X size={24} color={scrolled || mobileOpen ? "var(--rp-dark)" : "white"} />
+              ) : (
+                <Menu size={24} color={scrolled ? "var(--rp-dark)" : "white"} />
+              )}
+            </button>
+          </div>
         </div>
       </div>
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white border-t px-4 py-4 flex flex-col gap-4">
+        <div className="md:hidden bg-white dark:bg-[#071F1A] border-t dark:border-white/10 px-4 py-4 flex flex-col gap-4 transition-colors duration-300">
           {navLinks.map((link) => (
             <Link
               key={link.href}

@@ -7,7 +7,7 @@ import { requirements, WA_LINK } from "@/lib/data";
 
 export default function Requirements() {
   return (
-    <section className="py-20 px-4" style={{ background: "var(--rp-primary-bg)" }}>
+    <section className="py-20 px-4 transition-colors duration-300" style={{ background: "var(--rp-primary-bg)" }}>
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -30,7 +30,7 @@ export default function Requirements() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white rounded-2xl border p-6 md:p-8"
+          className="bg-white dark:bg-[#103A31] rounded-2xl border p-6 md:p-8 transition-colors duration-300"
           style={{ borderColor: "var(--rp-border)" }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">

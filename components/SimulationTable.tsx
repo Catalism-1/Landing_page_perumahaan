@@ -9,7 +9,7 @@ export default function SimulationTable() {
   const project = projects[0];
 
   return (
-    <section className="py-20 px-4 bg-white">
+    <section className="py-20 px-4 bg-white dark:bg-[#071F1A] transition-colors duration-300">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -53,7 +53,7 @@ export default function SimulationTable() {
                   </thead>
                   <tbody>
                     {tenorData.rows.map((row, j) => (
-                      <tr key={row.dp} className="border-t" style={{ borderColor: "var(--rp-border)" }}>
+                      <tr key={row.dp} className="border-t dark:bg-[#103A31] transition-colors duration-300" style={{ borderColor: "var(--rp-border)" }}>
                         <td className="py-3 px-4 font-medium" style={{ color: "var(--rp-dark)" }}>DP {row.dp}</td>
                         <td className="py-3 px-4 text-right font-semibold" style={{ color: "var(--rp-primary)" }}>{row.amount}</td>
                       </tr>

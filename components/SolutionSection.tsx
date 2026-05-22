@@ -6,7 +6,7 @@ import { solutionCards } from "@/lib/data";
 
 export default function SolutionSection() {
   return (
-    <section className="py-20 px-4" style={{ background: "var(--rp-primary-bg)" }}>
+    <section className="py-20 px-4 transition-colors duration-300" style={{ background: "var(--rp-primary-bg)" }}>
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function SolutionSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex items-center gap-3 p-5 rounded-xl bg-white border hover:shadow-md transition-shadow"
+              className="flex items-center gap-3 p-5 rounded-xl border bg-white dark:bg-[#103A31] hover:shadow-md transition-all duration-300"
               style={{ borderColor: "var(--rp-border)" }}
             >
               <div

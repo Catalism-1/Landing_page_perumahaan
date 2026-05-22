@@ -6,7 +6,7 @@ import { problemCards } from "@/lib/data";
 
 export default function ProblemSection() {
   return (
-    <section id="tentang" className="py-20 px-4 bg-white">
+    <section id="tentang" className="py-20 px-4 bg-white dark:bg-[#071F1A] transition-colors duration-300">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -33,7 +33,7 @@ export default function ProblemSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex items-start gap-3 p-5 rounded-xl border bg-white hover:shadow-md transition-shadow"
+              className="flex items-start gap-3 p-5 rounded-xl border bg-white dark:bg-[#103A31] hover:shadow-md transition-all duration-300"
               style={{ borderColor: "var(--rp-border)" }}
             >
               <div

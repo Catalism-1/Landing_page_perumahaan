@@ -11,7 +11,7 @@ export default function FeaturedProject() {
   const promo = project.promo;
 
   return (
-    <section id="proyek-pilihan" className="py-20 px-4 bg-white">
+    <section id="proyek-pilihan" className="py-20 px-4 bg-white dark:bg-[#071F1A] transition-colors duration-300">
       <div className="max-w-5xl mx-auto">
 
         {/* Promo Card */}
@@ -147,7 +147,7 @@ export default function FeaturedProject() {
         >
           <div className="flex flex-wrap justify-center gap-x-5 gap-y-2 mb-5 text-sm" style={{ color: "var(--rp-gray-text)" }}>
             <span>Developer: <strong style={{ color: "var(--rp-dark)" }}>{project.developer}</strong></span>
-            <span className="hidden sm:inline">|</span>
+            <span className="hidden sm:inline" style={{ color: "var(--rp-border)" }}>|</span>
             <span className="flex items-center gap-1">
               <MapPin size={14} />
               {project.location}
@@ -169,7 +169,7 @@ export default function FeaturedProject() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="rounded-xl overflow-hidden border"
+                  className="rounded-xl overflow-hidden border bg-white dark:bg-[#103A31] transition-colors duration-300"
                   style={{ borderColor: "var(--rp-border)" }}
                 >
                   <div className="relative aspect-[4/3] overflow-hidden">
@@ -198,7 +198,7 @@ export default function FeaturedProject() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="snap-center w-[85vw] max-w-[340px] shrink-0 rounded-xl overflow-hidden border"
+                    className="snap-center w-[85vw] max-w-[340px] shrink-0 rounded-xl overflow-hidden border bg-white dark:bg-[#103A31] transition-colors duration-300"
                     style={{ borderColor: "var(--rp-border)" }}
                   >
                     <div className="relative aspect-[4/3] overflow-hidden">
@@ -228,9 +228,9 @@ export default function FeaturedProject() {
               <span className="w-2.5 h-2.5 rounded-full" style={{ background: "var(--rp-primary)" }} />
               <span style={{ color: "var(--rp-dark)" }}><strong>{project.product}</strong></span>
             </div>
-            <span className="hidden sm:inline text-gray-300">|</span>
+            <span className="hidden sm:inline" style={{ color: "var(--rp-border)" }}>|</span>
             <span style={{ color: "var(--rp-gray-text)" }}>Tahap pertama: <strong style={{ color: "var(--rp-dark)" }}>{project.totalUnits} unit</strong></span>
-            <span className="hidden sm:inline text-gray-300">|</span>
+            <span className="hidden sm:inline" style={{ color: "var(--rp-border)" }}>|</span>
             <span style={{ color: "var(--rp-gray-text)" }}>Booking fee: <strong style={{ color: "var(--rp-dark)" }}>{project.bookingFee}</strong></span>
           </div>
 

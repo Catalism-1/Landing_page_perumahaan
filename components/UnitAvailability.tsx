@@ -9,7 +9,7 @@ export default function UnitAvailability() {
   const bookedPercent = (project.bookedUnits / project.totalUnits) * 100;
 
   return (
-    <section className="py-16 px-4 bg-white border-t" style={{ borderColor: "var(--rp-border)" }}>
+    <section className="py-16 px-4 bg-white dark:bg-[#071F1A] border-t dark:border-white/10 transition-colors duration-300" style={{ borderColor: "var(--rp-border)" }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}

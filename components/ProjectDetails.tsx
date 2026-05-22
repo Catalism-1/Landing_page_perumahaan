@@ -8,7 +8,7 @@ export default function ProjectDetails() {
   const project = projects[0];
 
   return (
-    <section className="py-20 px-4" style={{ background: "var(--rp-primary-bg)" }}>
+    <section className="py-20 px-4 transition-colors duration-300" style={{ background: "var(--rp-primary-bg)" }}>
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -34,7 +34,7 @@ export default function ProjectDetails() {
           {project.specs.map((spec, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 p-3 rounded-lg bg-white border"
+              className="flex items-center gap-3 p-3 rounded-lg border bg-white dark:bg-[#103A31] transition-colors duration-300"
               style={{ borderColor: "var(--rp-border)" }}
             >
               <Check size={16} style={{ color: "var(--rp-primary)" }} className="shrink-0" />
