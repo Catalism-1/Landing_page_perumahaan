@@ -119,7 +119,7 @@ export default function Footer() {
             <ul className="space-y-2.5 text-sm" style={{ color: "rgba(255,255,255,0.6)" }}>
               <li>Pringgabaya, Lombok Timur, NTB</li>
               <li>
-                <a href="https://wa.me/6285173221561" className="hover:text-white transition-colors">
+                <a href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "6285173221561"}`} className="hover:text-white transition-colors">
                   0851 7322 1561
                 </a>
               </li>
