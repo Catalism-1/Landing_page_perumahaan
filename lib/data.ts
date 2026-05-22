@@ -10,6 +10,16 @@ export interface LocationAdvantage {
   icon: string;
 }
 
+export interface ProjectPromo {
+  badge: string;
+  title: string;
+  highlight: string;
+  normalPrice: string;
+  disclaimer: string;
+  smallNote: string;
+  quotaNote: string;
+}
+
 export interface Project {
   id: string;
   name: string;
@@ -24,6 +34,7 @@ export interface Project {
   bookingFee: string;
   images: ProjectImage[];
   carouselNote: string;
+  promo?: ProjectPromo;
   locationAdvantages: LocationAdvantage[];
   specs: string[];
   simulation: {
@@ -64,6 +75,15 @@ export const projects: Project[] = [
       },
     ],
     carouselNote: "Sebagian gambar merupakan ilustrasi visual. Hasil akhir dapat berbeda.",
+    promo: {
+      badge: "Promo 5 Orang Tercepat",
+      title: "Terima Kunci Mulai",
+      highlight: "Rp5 Juta",
+      normalPrice: "Normal Rp17 Juta",
+      disclaimer: "Promo setara keringanan biaya awal untuk konsumen terpilih sesuai ketentuan.",
+      smallNote: "Syarat & ketentuan berlaku. Kuota promo dapat berubah sewaktu-waktu.",
+      quotaNote: "Promo berlaku untuk 5 orang tercepat dan mengikuti hasil pengecekan syarat serta ketentuan developer/bank.",
+    },
     locationAdvantages: [
       {
         title: "Dekat Pelabuhan Kayangan",
@@ -151,6 +171,8 @@ export const WA_LINK =
   "https://wa.me/6285173221561?text=Halo%20RumahPertama%2C%20saya%20ingin%20konsultasi%20rumah%20pertama.%20Saya%20tertarik%20dengan%20Ayyana%20Residence%20atau%20proyek%20lain%20yang%20cocok%20untuk%20saya.";
 export const WA_LINK_AYYANA =
   "https://wa.me/6285173221561?text=Halo%20RumahPertama%2C%20saya%20tertarik%20dengan%20Ayyana%20Residence%20Pringgabaya.%20Boleh%20info%20lebih%20lanjut%3F";
+export const WA_LINK_PROMO =
+  "https://wa.me/6285173221561?text=Halo%20RumahPertama%2C%20saya%20tertarik%20promo%20Ayyana%20Residence%20terima%20kunci%20mulai%205%20juta%20untuk%205%20orang%20tercepat.%20Saya%20ingin%20cek%20syaratnya.";
 
 export const problemCards = [
   "Bingung syarat rumah subsidi",
