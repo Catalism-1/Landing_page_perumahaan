@@ -30,7 +30,7 @@ export default function FeaturedProject() {
   }, []);
 
   return (
-    <section id="proyek-pilihan" className="py-20 px-4 bg-white dark:bg-[#071F1A] transition-colors duration-300">
+    <section id="proyek-pilihan" className="py-20 px-4 bg-white dark:bg-[#061F1A] transition-colors duration-300">
       <div className="max-w-5xl mx-auto">
 
         {/* Promo Card */}
@@ -43,7 +43,7 @@ export default function FeaturedProject() {
             className="mb-12"
           >
             <div
-              className="relative rounded-2xl overflow-hidden border shadow-[0_18px_50px_-20px_rgba(239,159,39,0.55)] dark:shadow-[0_18px_50px_-20px_rgba(0,0,0,0.6)]"
+              className="relative rounded-2xl overflow-hidden border shadow-[0_18px_50px_-20px_rgba(239,159,39,0.55)] dark:shadow-[0_18px_55px_-18px_rgba(239,159,39,0.35)]"
               style={{
                 borderColor: "var(--rp-cta)",
                 background:
@@ -53,7 +53,7 @@ export default function FeaturedProject() {
               {/* Soft amber glow behind hero number */}
               <div
                 aria-hidden
-                className="pointer-events-none absolute -top-20 -left-16 w-72 h-72 rounded-full blur-3xl opacity-50"
+                className="pointer-events-none absolute -top-20 -left-16 w-72 h-72 rounded-full blur-3xl opacity-50 dark:opacity-60"
                 style={{ background: "radial-gradient(closest-side, rgba(239,159,39,0.45), transparent)" }}
               />
 
@@ -139,7 +139,7 @@ export default function FeaturedProject() {
 
                 {/* Right: urgency + CTA */}
                 <div
-                  className="md:col-span-2 rounded-xl p-5 flex flex-col gap-4 border bg-white/85 dark:bg-[#0B2B24]/80"
+                  className="md:col-span-2 rounded-xl p-5 flex flex-col gap-4 border bg-white/90 dark:bg-[#082B24]/90 backdrop-blur-sm"
                   style={{ borderColor: "rgba(239,159,39,0.35)" }}
                 >
                   <div className="flex items-center gap-2">
@@ -286,7 +286,7 @@ export default function FeaturedProject() {
                   whileInView={{ opacity: 1, scale: 1 }}
                   viewport={{ once: true }}
                   transition={{ delay: i * 0.1 }}
-                  className="rounded-xl overflow-hidden border bg-white dark:bg-[#103A31] transition-colors duration-300"
+                  className="rounded-xl overflow-hidden border bg-white dark:bg-[#0D352D] transition-colors duration-300 hover:border-amber-600/20 dark:hover:border-amber-500/25"
                   style={{ borderColor: "var(--rp-border)" }}
                 >
                     <div className="relative aspect-[4/3] overflow-hidden">
@@ -314,7 +314,7 @@ export default function FeaturedProject() {
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
-                      className="snap-center w-[85vw] max-w-[340px] shrink-0 rounded-xl overflow-hidden border bg-white dark:bg-[#103A31] transition-colors duration-300"
+                      className="snap-center w-[85vw] max-w-[340px] shrink-0 rounded-xl overflow-hidden border bg-white dark:bg-[#0D352D] transition-colors duration-300"
                       style={{ borderColor: "var(--rp-border)" }}
                     >
                       <div className="relative aspect-[4/3] overflow-hidden">

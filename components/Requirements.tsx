@@ -30,7 +30,7 @@ export default function Requirements() {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="bg-white dark:bg-[#103A31] rounded-2xl border p-6 md:p-8 transition-colors duration-300"
+          className="bg-white dark:bg-[#0D352D] rounded-2xl border p-6 md:p-8 transition-colors duration-300"
           style={{ borderColor: "var(--rp-border)" }}
         >
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">

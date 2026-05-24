@@ -33,7 +33,7 @@ export default function SolutionSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08 }}
-              className="flex items-center gap-3 p-5 rounded-xl border bg-white dark:bg-[#103A31] hover:shadow-md transition-all duration-300"
+              className="flex items-center gap-3 p-5 rounded-xl border bg-white dark:bg-[#0D352D] hover:shadow-md dark:hover:shadow-[#061F1A]/40 transition-all duration-300"
               style={{ borderColor: "var(--rp-border)" }}
             >
               <div

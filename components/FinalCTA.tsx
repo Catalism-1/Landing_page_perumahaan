@@ -10,7 +10,7 @@ export default function FinalCTA() {
       id="konsultasi"
       className="py-20 px-4 text-center text-white"
       style={{
-        background: "linear-gradient(135deg, var(--rp-primary) 0%, var(--rp-primary-light) 100%)",
+        background: "linear-gradient(135deg, #0F6E56 0%, #1D9E75 100%)",
       }}
     >
       <div className="max-w-2xl mx-auto">

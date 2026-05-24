@@ -29,10 +29,17 @@ export default function Hero() {
 
       {/* Gradient Overlay */}
       <div
-        className="absolute inset-0"
+        className="absolute inset-0 dark:hidden"
         style={{
           background:
             "linear-gradient(to right, rgba(15,110,86,0.92) 0%, rgba(15,110,86,0.75) 50%, rgba(15,110,86,0.4) 100%)",
+        }}
+      />
+      <div
+        className="absolute inset-0 hidden dark:block"
+        style={{
+          background:
+            "linear-gradient(to right, rgba(6,31,26,0.94) 0%, rgba(6,31,26,0.82) 50%, rgba(6,31,26,0.5) 100%)",
         }}
       />
 

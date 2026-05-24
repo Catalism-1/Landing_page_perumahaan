@@ -34,7 +34,7 @@ export default function ProjectDetails() {
           {project.specs.map((spec, i) => (
             <div
               key={i}
-              className="flex items-center gap-3 p-3 rounded-lg border bg-white dark:bg-[#103A31] transition-colors duration-300"
+              className="flex items-center gap-3 p-3 rounded-lg border bg-white dark:bg-[#0D352D] hover:shadow-sm dark:hover:shadow-[#061F1A]/30 transition-all duration-300"
               style={{ borderColor: "var(--rp-border)" }}
             >
               <Check size={16} style={{ color: "var(--rp-primary)" }} className="shrink-0" />

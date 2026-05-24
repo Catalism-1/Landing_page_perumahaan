@@ -27,7 +27,7 @@ export default function LocationAdvantages() {
   const advantages = project.locationAdvantages;
 
   return (
-    <section className="py-20 px-4 bg-white dark:bg-[#071F1A] transition-colors duration-300">
+    <section className="py-20 px-4 bg-white dark:bg-[#061F1A] transition-colors duration-300">
       <div className="max-w-5xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -56,7 +56,7 @@ export default function LocationAdvantages() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.07 }}
-                className="flex items-start gap-4 p-5 rounded-xl border bg-white dark:bg-[#103A31] hover:shadow-lg transition-all duration-300"
+                className="flex items-start gap-4 p-5 rounded-xl border bg-white dark:bg-[#0D352D] hover:shadow-lg dark:hover:shadow-[#061F1A]/40 dark:hover:border-amber-600/20 transition-all duration-300"
                 style={{ borderColor: "var(--rp-border)" }}
               >
                 <div

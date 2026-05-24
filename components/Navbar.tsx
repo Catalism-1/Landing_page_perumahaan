@@ -29,8 +29,8 @@ export default function Navbar() {
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
         scrolled || mobileOpen
-          ? "bg-white shadow-md dark:bg-[#071F1A] dark:shadow-black/30"
-          : "bg-transparent"
+          ? "bg-white/95 backdrop-blur-md shadow-md dark:bg-[#061F1A]/90 dark:shadow-[#030E0D]/60"
+          : "bg-transparent dark:bg-transparent"
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -99,7 +99,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden bg-white dark:bg-[#071F1A] border-t dark:border-white/10 px-4 py-4 flex flex-col gap-4 transition-colors duration-300">
+        <div className="md:hidden bg-white/95 dark:bg-[#061F1A]/95 backdrop-blur-md border-t border-[#D3D1C7] dark:border-white/10 px-4 py-4 flex flex-col gap-4 transition-colors duration-300">
           {navLinks.map((link) => (
             <Link
               key={link.href}

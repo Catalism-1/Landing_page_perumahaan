@@ -8,7 +8,7 @@ export default function WhatsAppButton() {
     <WhatsAppLink
       href={WA_LINK}
       source="floating_whatsapp"
-      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg transition-transform hover:scale-110"
+      className="fixed bottom-6 right-6 z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg shadow-green-500/30 dark:shadow-green-500/40 transition-transform hover:scale-110"
       style={{ background: "#25D366" }}
       ariaLabel="Chat WhatsApp"
     >

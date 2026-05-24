@@ -9,7 +9,7 @@ export default function SimulationTable() {
   const project = projects[0];
 
   return (
-    <section className="py-20 px-4 bg-white dark:bg-[#071F1A] transition-colors duration-300">
+    <section className="py-20 px-4 bg-white dark:bg-[#061F1A] transition-colors duration-300">
       <div className="max-w-4xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -43,17 +43,17 @@ export default function SimulationTable() {
               >
                 Tenor {tenorData.tenor}
               </h3>
-              <div className="overflow-x-auto rounded-xl border" style={{ borderColor: "var(--rp-border)" }}>
+              <div className="overflow-x-auto rounded-xl border dark:border-white/10" style={{ borderColor: "var(--rp-border)" }}>
                 <table className="w-full text-sm">
                   <thead>
-                    <tr style={{ background: "var(--rp-primary-bg)" }}>
+                    <tr className="dark:bg-[#082B24]/80" style={{ background: "var(--rp-primary-bg)" }}>
                       <th className="text-left py-3 px-4 font-semibold" style={{ color: "var(--rp-dark)" }}>DP</th>
                       <th className="text-right py-3 px-4 font-semibold" style={{ color: "var(--rp-dark)" }}>Angsuran / Bulan</th>
                     </tr>
                   </thead>
                   <tbody>
                     {tenorData.rows.map((row, j) => (
-                      <tr key={row.dp} className="border-t dark:bg-[#103A31] transition-colors duration-300" style={{ borderColor: "var(--rp-border)" }}>
+                      <tr key={row.dp} className={`border-t transition-colors duration-300 ${j % 2 === 0 ? 'dark:bg-[#0D352D]/40' : 'dark:bg-[#0D352D]'}`} style={{ borderColor: "var(--rp-border)" }}>
                         <td className="py-3 px-4 font-medium" style={{ color: "var(--rp-dark)" }}>DP {row.dp}</td>
                         <td className="py-3 px-4 text-right font-semibold" style={{ color: "var(--rp-primary)" }}>{row.amount}</td>
                       </tr>

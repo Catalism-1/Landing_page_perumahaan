@@ -11,7 +11,7 @@ import { faqs } from "@/lib/data";
 
 export default function FAQ() {
   return (
-    <section id="faq" className="py-20 px-4 bg-white dark:bg-[#071F1A] transition-colors duration-300">
+    <section id="faq" className="py-20 px-4 bg-white dark:bg-[#061F1A] transition-colors duration-300">
       <div className="max-w-3xl mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ export default function FAQ() {
               <AccordionItem
                 key={i}
                 value={`item-${i}`}
-                className="border rounded-xl px-5 overflow-hidden bg-white dark:bg-[#103A31] transition-colors duration-300"
+                className="border rounded-xl px-5 overflow-hidden bg-white dark:bg-[#0D352D] dark:hover:border-amber-600/15 transition-colors duration-300"
                 style={{ borderColor: "var(--rp-border)" }}
               >
                 <AccordionTrigger

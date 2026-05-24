@@ -38,7 +38,7 @@ export default function AyyanaLocationMap() {
       className="mb-12"
     >
       <div
-        className="rounded-2xl overflow-hidden border"
+        className="rounded-2xl overflow-hidden border dark:border-white/10"
         style={{
           borderColor: "var(--rp-border)",
           background: "var(--rp-primary-bg)",
@@ -46,7 +46,7 @@ export default function AyyanaLocationMap() {
       >
         {/* Header */}
         <div
-          className="px-6 md:px-8 py-5 border-b"
+          className="px-6 md:px-8 py-5 border-b dark:border-white/10"
           style={{ borderColor: "rgba(15,110,86,0.15)" }}
         >
           <div className="flex items-start gap-3">
@@ -121,7 +121,7 @@ export default function AyyanaLocationMap() {
                 target="_blank"
                 rel="noopener noreferrer"
                 onClick={handleMapsClick}
-                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold border-2 transition-all hover:scale-[1.02] text-sm"
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold border-2 transition-all hover:scale-[1.02] text-sm dark:border-[#1D9E75] dark:text-[#1D9E75]"
                 style={{ borderColor: "var(--rp-primary)", color: "var(--rp-primary)" }}
               >
                 <Navigation size={16} />
@@ -131,7 +131,7 @@ export default function AyyanaLocationMap() {
                 href={WA_SURVEY}
                 source="location_section_survey"
                 ariaLabel="Konsultasi dan jadwalkan survey via WhatsApp"
-                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold text-white transition-all hover:scale-[1.02] hover:shadow-lg text-sm"
+                className="flex-1 flex items-center justify-center gap-2 px-4 py-3 rounded-xl font-semibold text-white transition-all hover:scale-[1.02] hover:shadow-lg dark:hover:shadow-amber-600/30 text-sm"
                 style={{ background: "var(--rp-cta)" }}
               >
                 <svg viewBox="0 0 24 24" width="15" height="15" fill="currentColor">
@@ -144,7 +144,7 @@ export default function AyyanaLocationMap() {
 
           {/* Right: map embed */}
           <div
-            className="relative min-h-[300px] md:min-h-[360px] border-t md:border-t-0 md:border-l"
+            className="relative min-h-[300px] md:min-h-[360px] border-t md:border-t-0 md:border-l dark:border-white/10"
             style={{ borderColor: "rgba(15,110,86,0.15)" }}
           >
             {/* Clickable overlay chip */}
@@ -168,11 +168,11 @@ export default function AyyanaLocationMap() {
               <div className="min-w-0">
                 <p
                   className="font-semibold text-xs leading-tight truncate"
-                  style={{ color: "var(--rp-dark)" }}
+                  style={{ color: "#2C2C2A" }}
                 >
                   Ayyana Residence Pringgabaya
                 </p>
-                <p className="text-[11px] leading-tight" style={{ color: "var(--rp-gray-text)" }}>
+                <p className="text-[11px] leading-tight" style={{ color: "#5F5E5A" }}>
                   Klik untuk buka rute Google Maps
                 </p>
               </div>
