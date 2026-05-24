@@ -15,9 +15,10 @@ export interface ProjectPromo {
   title: string;
   highlight: string;
   normalPrice: string;
+  subline: string;
+  microcopy: string;
   disclaimer: string;
-  smallNote: string;
-  quotaNote: string;
+  benefits: string[];
 }
 
 export interface Project {
@@ -76,13 +77,19 @@ export const projects: Project[] = [
     ],
     carouselNote: "Sebagian gambar merupakan ilustrasi visual. Hasil akhir dapat berbeda.",
     promo: {
-      badge: "Promo 5 Orang Tercepat",
+      badge: "Promo Terbatas 5 Orang Tercepat",
       title: "Terima Kunci Mulai",
       highlight: "Rp5 Juta",
       normalPrice: "Normal Rp17 Juta",
-      disclaimer: "Promo setara keringanan biaya awal untuk konsumen terpilih sesuai ketentuan.",
-      smallNote: "Syarat & ketentuan berlaku. Kuota promo dapat berubah sewaktu-waktu.",
-      quotaNote: "Promo berlaku untuk 5 orang tercepat dan mengikuti hasil pengecekan syarat serta ketentuan developer/bank.",
+      subline: "Khusus konsumen terpilih sesuai ketentuan.",
+      microcopy: "Cek syarat promo dulu via WhatsApp sebelum kuota habis.",
+      disclaimer:
+        "Promo berlaku untuk 5 orang tercepat dan mengikuti hasil pengecekan syarat serta ketentuan developer/bank. Ketersediaan promo dapat berubah sewaktu-waktu.",
+      benefits: [
+        "Booking fee Rp500 ribu",
+        "Bisa cek syarat dulu",
+        "Bisa jadwalkan survey",
+      ],
     },
     locationAdvantages: [
       {
@@ -171,7 +178,8 @@ const WHATSAPP = process.env.NEXT_PUBLIC_WHATSAPP_NUMBER || "6285173221561";
 export const WA_NUMBER = WHATSAPP;
 export const WA_LINK = `https://wa.me/${WHATSAPP}?text=Halo%20RumahPertama%2C%20saya%20ingin%20konsultasi%20rumah%20pertama.%20Saya%20tertarik%20dengan%20Ayyana%20Residence%20atau%20proyek%20lain%20yang%20cocok%20untuk%20saya.`;
 export const WA_LINK_AYYANA = `https://wa.me/${WHATSAPP}?text=Halo%20RumahPertama%2C%20saya%20tertarik%20dengan%20Ayyana%20Residence%20Pringgabaya.%20Boleh%20info%20lebih%20lanjut%3F`;
-export const WA_LINK_PROMO = `https://wa.me/${WHATSAPP}?text=Halo%20RumahPertama%2C%20saya%20tertarik%20promo%20Ayyana%20Residence%20terima%20kunci%20mulai%205%20juta%20untuk%205%20orang%20tercepat.%20Saya%20ingin%20cek%20syaratnya.`;
+export const WA_LINK_PROMO = `https://wa.me/${WHATSAPP}?text=Halo%20RumahPertama%2C%20saya%20tertarik%20promo%20Ayyana%20Residence%20terima%20kunci%20mulai%20Rp5%20juta%20untuk%205%20orang%20tercepat.%20Saya%20ingin%20cek%20syarat%20dan%20ketersediaan%20promonya.`;
+export const WA_LINK_PROMO_INFO = `https://wa.me/${WHATSAPP}?text=Halo%20RumahPertama%2C%20saya%20ingin%20tanya%20syarat%20dan%20ketentuan%20promo%20Ayyana%20Residence%20terima%20kunci%20mulai%20Rp5%20juta.`;
 
 export const problemCards = [
   "Bingung syarat rumah subsidi",
