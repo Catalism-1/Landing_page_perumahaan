@@ -12,6 +12,7 @@ import {
 } from "@/lib/data";
 import { event } from "@/lib/fpixel";
 import { useEffect, useRef } from "react";
+import AyyanaLocationMap from "@/components/AyyanaLocationMap";
 
 export default function FeaturedProject() {
   const project = projects[0];
@@ -232,6 +233,8 @@ export default function FeaturedProject() {
             </div>
           </motion.div>
         )}
+
+        <AyyanaLocationMap />
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}
